@@ -65,6 +65,20 @@
   transform: translateY(-4px);
 }
 
+.blog-card-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: $lightBackground3;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .blog-card.dark-mode {
   background-color: $darkBackground;
   box-shadow: 0 0 36px rgba(255, 255, 255, 0.08);

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>React vs Next.js comparison illustration</title>
+  <rect width="1200" height="630" fill="#f5f2f4"/>
+  <rect x="60" y="80" width="480" height="220" rx="12" fill="#6c63ff"/>
+  <text x="300" y="135" font-family="Montserrat, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">React</text>
+  <text x="300" y="175" font-family="Montserrat, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">UI Library</text>
+  <text x="300" y="215" font-family="Montserrat, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Build components · Manage state</text>
+  <text x="300" y="255" font-family="Montserrat, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">You handle routing &amp; SEO</text>
+  <rect x="660" y="80" width="480" height="220" rx="12" fill="#8c43ce"/>
+  <text x="900" y="135" font-family="Montserrat, sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Next.js</text>
+  <text x="900" y="175" font-family="Montserrat, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">Framework</text>
+  <text x="900" y="215" font-family="Montserrat, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Routing · SSR · SSG</text>
+  <text x="900" y="255" font-family="Montserrat, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">SEO &amp; performance built in</text>
+  <rect x="60" y="400" width="1080" height="60" rx="8" fill="#ffffff" stroke="#d9dbdf" stroke-width="2"/>
+  <text x="600" y="438" font-family="Montserrat, sans-serif" font-size="24" font-weight="700" fill="#262626" text-anchor="middle">Choose React for SPAs · Choose Next.js for production sites</text>
+</svg>

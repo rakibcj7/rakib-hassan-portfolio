@@ -36,6 +36,11 @@ export default function BlogPreview() {
                   isDark ? "blog-preview-card dark-mode" : "blog-preview-card"
                 }
               >
+                {post.coverImage && (
+                  <div className="blog-preview-card-image">
+                    <img src={post.coverImage} alt={post.title} />
+                  </div>
+                )}
                 <div className="blog-preview-body">
                   <div className="blog-preview-meta">
                     <time>{post.publishedDate}</time>

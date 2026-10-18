@@ -37,6 +37,14 @@ export default function Blog() {
                   className="blog-grid-link"
                 >
                   <article className={isDark ? "blog-card dark-mode" : "blog-card"}>
+                    {post.coverImage && (
+                      <div className="blog-card-image">
+                        <img
+                          src={post.coverImage}
+                          alt={post.title}
+                        />
+                      </div>
+                    )}
                     <div className="blog-card-body">
                       <div className="blog-card-meta">
                         <time>{post.publishedDate}</time>

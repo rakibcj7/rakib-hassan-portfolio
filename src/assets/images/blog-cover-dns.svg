@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <title>Website request flow illustration</title>
+  <rect width="1200" height="630" fill="#f5f2f4"/>
+  <rect x="60" y="80" width="220" height="90" rx="10" fill="#6c63ff"/>
+  <text x="170" y="135" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Browser</text>
+  <path d="M280 125 L360 125" stroke="#6c63ff" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <rect x="380" y="80" width="220" height="90" rx="10" fill="#8c43ce"/>
+  <text x="490" y="135" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">DNS</text>
+  <path d="M600 125 L680 125" stroke="#6c63ff" stroke-width="4" fill="none" marker-end="url(#arrow)"/>
+  <rect x="700" y="80" width="220" height="90" rx="10" fill="#6c63ff"/>
+  <text x="810" y="135" font-family="Montserrat, sans-serif" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Server</text>
+  <rect x="60" y="260" width="1080" height="60" rx="8" fill="#ffffff" stroke="#d9dbdf" stroke-width="2"/>
+  <text x="600" y="298" font-family="Montserrat, sans-serif" font-size="26" font-weight="700" fill="#262626" text-anchor="middle">GET /index.html → 200 OK</text>
+  <rect x="60" y="380" width="1080" height="60" rx="8" fill="#ffffff" stroke="#d9dbdf" stroke-width="2"/>
+  <text x="600" y="418" font-family="Montserrat, sans-serif" font-size="26" font-weight="700" fill="#262626" text-anchor="middle">Render HTML → Paint pixels</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#6c63ff"/>
+    </marker>
+  </defs>
+</svg>

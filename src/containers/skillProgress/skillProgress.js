@@ -32,7 +32,7 @@ export default function StackProgress() {
               <DisplayLottie animationData={Build} />
             ) : (
               <img
-                alt="Skills"
+                alt="Skills progress illustration"
                 src={require("../../assets/images/skill.svg")}
               />
             )}

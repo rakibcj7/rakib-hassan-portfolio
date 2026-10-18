@@ -17,7 +17,7 @@ export const blogPosts = [
       "From typing a URL into the address bar to a rendered page on your screen, a surprising number of steps happen in under a second. This article walks through DNS lookups, TCP handshakes, HTTP requests, and browser rendering so the journey from keyboard to pixels finally makes sense.",
     publishedDate: "2026-10-18",
     readingTime: "10 min read",
-    coverImage: "",
+    coverImage: require("./assets/images/blog-cover-dns.svg"),
     tags: ["Web Fundamentals", "DNS", "HTTP", "Browser"]
   },
   {
@@ -27,7 +27,7 @@ export const blogPosts = [
       "React is a UI library, while Next.js is a framework built on top of it. Confusing the two leads to architectural mistakes early in a project. This article breaks down what each tool is best at and gives practical guidance for choosing between a plain React app, Next.js, and other meta-frameworks.",
     publishedDate: "2026-10-18",
     readingTime: "9 min read",
-    coverImage: "",
+    coverImage: require("./assets/images/blog-cover-react-nextjs.svg"),
     tags: ["React", "Next.js", "Frontend", "Routing"]
   },
   {
@@ -37,7 +37,7 @@ export const blogPosts = [
       "A full-stack application spans design, API design, state management, and persistence. This article outlines a sane order of operations for building one from scratch, covering component structure, API contracts, database schema, and deployment, without overwhelming a junior developer.",
     publishedDate: "2026-10-18",
     readingTime: "12 min read",
-    coverImage: "",
+    coverImage: require("./assets/images/blog-cover-fullstack.svg"),
     tags: ["Full Stack", "API Design", "Database", "Architecture"]
   }
 ];

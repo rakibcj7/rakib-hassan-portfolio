@@ -50,6 +50,12 @@ export default function BlogDetail() {
             <span>{post.readingTime}</span>
           </div>
 
+          {post.coverImage && (
+            <div className="blog-detail-cover">
+              <img src={post.coverImage} alt={post.title} />
+            </div>
+          )}
+
           {post.tags && post.tags.length > 0 && (
             <div className="blog-detail-tags">
               {post.tags.map((tag, index) => (
