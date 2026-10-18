@@ -1,0 +1,31 @@
+<svg width="700" height="520" viewBox="0 0 700 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="520" rx="30" fill="#EFF6FF"/>
+  <rect x="28" y="28" width="644" height="465" rx="24" fill="white" stroke="#DBEAFE"/>
+  <rect x="58" y="58" width="172" height="110" rx="18" fill="#E0F2FE"/>
+  <rect x="254" y="58" width="172" height="110" rx="18" fill="#ECFDF5"/>
+  <rect x="450" y="58" width="172" height="110" rx="18" fill="#FDF2F8"/>
+  <rect x="58" y="198" width="564" height="245" rx="22" fill="#F8FAFC"/>
+  <path d="M88 371C142 327 175 317 220 340C251 357 285 334 319 329C354 323 391 342 425 304C465 261 500 266 560 212" stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="88" cy="371" r="10" fill="#2563EB"/>
+  <circle cx="220" cy="340" r="10" fill="#2563EB"/>
+  <circle cx="318" cy="329" r="10" fill="#2563EB"/>
+  <circle cx="425" cy="304" r="10" fill="#2563EB"/>
+  <circle cx="560" cy="212" r="10" fill="#2563EB"/>
+  <rect x="78" y="78" width="64" height="18" rx="9" fill="#7DD3FC"/>
+  <rect x="278" y="78" width="84" height="18" rx="9" fill="#6EE7B7"/>
+  <rect x="474" y="78" width="82" height="18" rx="9" fill="#F9A8D4"/>
+  <text x="78" y="120" fill="#0F172A" font-family="Arial, sans-serif" font-size="28" font-weight="700">৳ 1.2M</text>
+  <text x="278" y="120" fill="#0F172A" font-family="Arial, sans-serif" font-size="28" font-weight="700">৳ 980K</text>
+  <text x="474" y="120" fill="#0F172A" font-family="Arial, sans-serif" font-size="28" font-weight="700">৳ 220K</text>
+  <text x="78" y="149" fill="#475569" font-family="Arial, sans-serif" font-size="15">Ads Spend</text>
+  <text x="278" y="149" fill="#475569" font-family="Arial, sans-serif" font-size="15">Revenue</text>
+  <text x="474" y="149" fill="#475569" font-family="Arial, sans-serif" font-size="15">Net Profit</text>
+  <text x="90" y="236" fill="#0F172A" font-family="Arial, sans-serif" font-size="22" font-weight="700">Business performance</text>
+  <rect x="90" y="270" width="82" height="12" rx="6" fill="#BFDBFE"/>
+  <rect x="90" y="292" width="128" height="12" rx="6" fill="#DBEAFE"/>
+  <rect x="90" y="314" width="96" height="12" rx="6" fill="#BFDBFE"/>
+  <rect x="90" y="336" width="150" height="12" rx="6" fill="#DBEAFE"/>
+  <rect x="416" y="270" width="168" height="92" rx="16" fill="#0F172A"/>
+  <text x="440" y="315" fill="white" font-family="Arial, sans-serif" font-size="16">Margin</text>
+  <text x="440" y="342" fill="white" font-family="Arial, sans-serif" font-size="30" font-weight="700">+18.6%</text>
+</svg>
