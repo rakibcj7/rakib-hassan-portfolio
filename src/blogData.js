@@ -1,3 +1,8 @@
+import blogCoverDns from "./assets/images/blog-cover-dns.svg";
+import blogCoverReactNextjs from "./assets/images/blog-cover-react-nextjs.svg";
+import blogCoverFullstack from "./assets/images/blog-cover-fullstack.svg";
+import blogCoverPortfolio from "./assets/images/blog-cover-portfolio.svg";
+
 // Blog content for the portfolio.
 // Posts are stored as structured data with stable slugs so each article
 // has a shareable URL (/blog/[slug]) without needing a database or CMS.
@@ -17,7 +22,7 @@ export const blogPosts = [
       "From typing a URL into the address bar to a rendered page on your screen, a surprising number of steps happen in under a second. This article walks through DNS lookups, TCP handshakes, HTTP requests, and browser rendering so the journey from keyboard to pixels finally makes sense.",
     publishedDate: "2026-10-18",
     readingTime: "10 min read",
-    coverImage: require("./assets/images/blog-cover-dns.svg"),
+    coverImage: blogCoverDns,
     tags: ["Web Fundamentals", "DNS", "HTTP", "Browser"]
   },
   {
@@ -27,7 +32,7 @@ export const blogPosts = [
       "React is a UI library, while Next.js is a framework built on top of it. Confusing the two leads to architectural mistakes early in a project. This article breaks down what each tool is best at and gives practical guidance for choosing between a plain React app, Next.js, and other meta-frameworks.",
     publishedDate: "2026-10-18",
     readingTime: "9 min read",
-    coverImage: require("./assets/images/blog-cover-react-nextjs.svg"),
+    coverImage: blogCoverReactNextjs,
     tags: ["React", "Next.js", "Frontend", "Routing"]
   },
   {
@@ -37,7 +42,7 @@ export const blogPosts = [
       "A full-stack application spans design, API design, state management, and persistence. This article outlines a sane order of operations for building one from scratch, covering component structure, API contracts, database schema, and deployment, without overwhelming a junior developer.",
     publishedDate: "2026-10-18",
     readingTime: "12 min read",
-    coverImage: require("./assets/images/blog-cover-fullstack.svg"),
+    coverImage: blogCoverFullstack,
     tags: ["Full Stack", "API Design", "Database", "Architecture"]
   },
   {
@@ -47,7 +52,7 @@ export const blogPosts = [
       "A strong portfolio is less about where you studied and more about what you can show. This article covers how to pick real projects, write honest descriptions, and structure your site so recruiters and clients can actually understand what you build.",
     publishedDate: "2026-10-18",
     readingTime: "8 min read",
-    coverImage: require("./assets/images/blog-cover-portfolio.svg"),
+    coverImage: blogCoverPortfolio,
     tags: ["Career", "Portfolio", "Personal Growth"]
   }
 ];

@@ -21,7 +21,9 @@ export default function Profile() {
         // the GitHub profile / contact section does not re-fetch on every load.
         const cached = getCachedProfile();
         if (cached) {
-          setProfileFunction(cached);
+          if (isMounted) {
+            setProfileFunction(cached);
+          }
           return;
         }
 
@@ -32,6 +34,9 @@ export default function Profile() {
             }
           })
           .then(response => {
+            if (!isMounted || !response || !response.data || !response.data.user) {
+              return;
+            }
             setCachedProfile(response.data.user);
             setProfileFunction(response.data.user);
           })
@@ -39,7 +44,9 @@ export default function Profile() {
             console.error(
               `${error} (because of this error GitHub contact section could not be displayed. Contact section has reverted to default)`
             );
-            setProfileFunction("Error");
+            if (isMounted) {
+              setProfileFunction("Error");
+            }
             openSource.showGithubProfile = "false";
           });
       };

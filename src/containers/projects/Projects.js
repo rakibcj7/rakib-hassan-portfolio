@@ -22,7 +22,9 @@ export default function Projects() {
       // the Open Source section does not re-fetch on every page load.
       const cached = getCachedProfile();
       if (cached && cached.pinnedItems && cached.pinnedItems.edges) {
-        setrepoFunction(cached.pinnedItems.edges);
+        if (isMounted) {
+          setrepoFunction(cached.pinnedItems.edges);
+        }
         return;
       }
 
@@ -34,6 +36,9 @@ export default function Projects() {
           throw result;
         })
         .then(response => {
+          if (!isMounted || !response || !response.data || !response.data.user) {
+            return;
+          }
           setCachedProfile(response.data.user);
           setrepoFunction(response.data.user.pinnedItems.edges);
         })
@@ -41,7 +46,9 @@ export default function Projects() {
           console.error(
             `${error} (because of this error, nothing is shown in place of Projects section. Also check if Projects section has been configured)`
           );
-          setrepoFunction("Error");
+          if (isMounted) {
+            setrepoFunction("Error");
+          }
         });
     };
 

@@ -62,6 +62,20 @@
   font-weight: 700;
   line-height: 1.2;
   margin: 0;
+  color: $titleColor;
+}
+
+.blog-detail-page.dark-mode .blog-detail-title,
+.blog-detail-page.dark-mode .blog-detail-related-title,
+.blog-detail-page.dark-mode .blog-detail-related-item-title,
+.blog-detail-page.dark-mode .blog-back-link {
+  color: #d9d4ff;
+}
+
+.blog-detail-page.dark-mode .blog-detail-meta,
+.blog-detail-page.dark-mode .blog-detail-body,
+.blog-detail-page.dark-mode .blog-detail-excerpt p {
+  color: #edf2ff;
 }
 
 .blog-detail-meta {

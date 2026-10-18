@@ -28,6 +28,11 @@
   font-weight: 400;
   margin: 0 0 16px;
   line-height: normal;
+  color: $titleColor;
+}
+
+.dark-mode .blog-page-title {
+  color: #d9d4ff;
 }
 
 .blog-page-subtitle {
@@ -35,6 +40,10 @@
   color: $subTitle;
   max-width: 640px;
   margin: 0 auto;
+}
+
+.dark-mode .blog-page-subtitle {
+  color: #e7e6ff;
 }
 
 .blog-page-actions {
@@ -114,7 +123,7 @@
 }
 
 .blog-card.dark-mode .blog-card-title {
-  color: $textColorDark;
+  color: #d9d4ff;
 }
 
 .blog-card-excerpt {

@@ -8,7 +8,6 @@ import {
   greeting,
   workExperiences,
   skillsSection,
-  openSource,
   resumeSection
 } from "../../portfolio";
 
