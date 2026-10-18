@@ -5,6 +5,7 @@ import {blogMetadata, blogPosts} from "../../blogData";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 import BlogSEO from "../../components/blog/BlogSEO";
+import Button from "../../components/button/Button";
 
 export default function Blog() {
   const {isDark} = useContext(StyleContext);
@@ -22,6 +23,9 @@ export default function Blog() {
             <p className="blog-page-kicker">Writings</p>
             <h1 className="blog-page-title">{blogMetadata.title}</h1>
             <p className="blog-page-subtitle">{blogMetadata.subtitle}</p>
+            <div className="blog-page-actions">
+              <Button text="Back to Home" href="/" />
+            </div>
           </header>
 
           {blogPosts.length === 0 ? (

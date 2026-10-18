@@ -4,6 +4,7 @@ import "./BlogDetail.scss";
 import {getPostBySlug, getRelatedPosts} from "../../blogData";
 import StyleContext from "../../contexts/StyleContext";
 import BlogSEO from "../../components/blog/BlogSEO";
+import Button from "../../components/button/Button";
 
 export default function BlogDetail() {
   const {isDark} = useContext(StyleContext);
@@ -78,7 +79,7 @@ export default function BlogDetail() {
             </p>
             <p>
               Each article in this blog is written to be technically accurate and
-              useful for junior developers. Content is reviewed and finalized
+              useful to junior developers. Content is reviewed and finalized
               by the author before publication.
             </p>
           </div>
@@ -110,6 +111,9 @@ export default function BlogDetail() {
           <Link to="/blog" className="blog-back-link">
             ← Back to all articles
           </Link>
+          <div className="blog-detail-home-button">
+            <Button text="Back to Home" href="/" />
+          </div>
         </div>
       </div>
     </div>

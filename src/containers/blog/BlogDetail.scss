@@ -160,6 +160,15 @@
 
 .blog-detail-footer-link {
   margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+}
+
+.blog-detail-home-button {
+  display: flex;
+  align-items: center;
 }
 
 .blog-detail-empty-state {

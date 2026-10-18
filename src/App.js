@@ -1,6 +1,7 @@
 import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.scss";
+import Header from "./components/header/Header";
 import Main from "./containers/Main";
 import ProjectDetail from "./containers/projectDetail/ProjectDetail";
 import Blog from "./containers/blog/Blog";
@@ -27,6 +28,7 @@ function App() {
     <BrowserRouter>
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
         <div>
+          <Header />
           <Routes>
             <Route path="/blog/:slug" element={<BlogDetail />} />
             <Route path="/blog" element={<Blog />} />
