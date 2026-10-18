@@ -1,6 +1,7 @@
 import React, {useState, useEffect, lazy, Suspense} from "react";
 import {openSource} from "../../portfolio";
 import Contact from "../contact/Contact";
+import {getCachedProfile, setCachedProfile} from "../../profileCache";
 
 const GithubProfileCard = lazy(() =>
   import("../../components/githubProfileCard/GithubProfileCard")
@@ -12,8 +13,18 @@ export default function Profile() {
   }
 
   useEffect(() => {
+    let isMounted = true;
+
     if (openSource.showGithubProfile === "true") {
       const getProfileData = () => {
+        // Preserve the cached GitHub data across refreshes for 10 minutes so
+        // the GitHub profile / contact section does not re-fetch on every load.
+        const cached = getCachedProfile();
+        if (cached) {
+          setProfileFunction(cached);
+          return;
+        }
+
         fetch("/profile.json")
           .then(result => {
             if (result.ok) {
@@ -21,6 +32,7 @@ export default function Profile() {
             }
           })
           .then(response => {
+            setCachedProfile(response.data.user);
             setProfileFunction(response.data.user);
           })
           .catch(function (error) {
@@ -32,6 +44,10 @@ export default function Profile() {
           });
       };
       getProfileData();
+
+      return () => {
+        isMounted = false;
+      };
     }
   }, []);
   if (

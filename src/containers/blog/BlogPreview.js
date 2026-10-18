@@ -4,6 +4,7 @@ import "./BlogPreview.scss";
 import {blogPosts} from "../../blogData";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
+import blogEmptyState from "../../assets/images/blog-empty-state.svg";
 
 const PREVIEW_LIMIT = 3;
 
@@ -36,9 +37,13 @@ export default function BlogPreview() {
                   isDark ? "blog-preview-card dark-mode" : "blog-preview-card"
                 }
               >
-                {post.coverImage && (
+                {post.coverImage ? (
                   <div className="blog-preview-card-image">
                     <img src={post.coverImage} alt={post.title} />
+                  </div>
+                ) : (
+                  <div className="blog-preview-card-image blog-preview-card-image-fallback">
+                    <img src={blogEmptyState} alt={post.title} />
                   </div>
                 )}
                 <div className="blog-preview-body">

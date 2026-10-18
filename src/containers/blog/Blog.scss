@@ -154,6 +154,17 @@
   font-size: 1.125rem;
 }
 
+.blog-empty-state-image {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+.blog-card-image-fallback {
+  background-color: $lightBackground3;
+}
+
 /* Media Query */
 @media (max-width: 1380px) {
   .blog-page-title {

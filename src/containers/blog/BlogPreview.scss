@@ -67,6 +67,20 @@
   display: block;
 }
 
+.blog-preview-card-image-fallback {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background-color: $lightBackground3;
+}
+
+.blog-preview-card-image-fallback img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .blog-preview-card.dark-mode {
   background-color: $darkBackground;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.08);

@@ -3,6 +3,8 @@ import "./Project.scss";
 import Button from "../../components/button/Button";
 import {openSource, socialMediaLinks} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import {getCachedProfile, setCachedProfile} from "../../profileCache";
+
 export default function Projects() {
   const GithubRepoCard = lazy(() =>
     import("../../components/githubRepoCard/GithubRepoCard")
@@ -13,7 +15,17 @@ export default function Projects() {
   const {isDark} = useContext(StyleContext);
 
   useEffect(() => {
+    let isMounted = true;
+
     const getRepoData = () => {
+      // Preserve the cached GitHub data across refreshes for 10 minutes so
+      // the Open Source section does not re-fetch on every page load.
+      const cached = getCachedProfile();
+      if (cached && cached.pinnedItems && cached.pinnedItems.edges) {
+        setrepoFunction(cached.pinnedItems.edges);
+        return;
+      }
+
       fetch("/profile.json")
         .then(result => {
           if (result.ok) {
@@ -22,6 +34,7 @@ export default function Projects() {
           throw result;
         })
         .then(response => {
+          setCachedProfile(response.data.user);
           setrepoFunction(response.data.user.pinnedItems.edges);
         })
         .catch(function (error) {
@@ -31,7 +44,12 @@ export default function Projects() {
           setrepoFunction("Error");
         });
     };
+
     getRepoData();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   function setrepoFunction(array) {

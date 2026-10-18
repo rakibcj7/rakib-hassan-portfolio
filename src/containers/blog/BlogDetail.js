@@ -5,6 +5,7 @@ import {getPostBySlug, getRelatedPosts} from "../../blogData";
 import StyleContext from "../../contexts/StyleContext";
 import BlogSEO from "../../components/blog/BlogSEO";
 import Button from "../../components/button/Button";
+import blogEmptyState from "../../assets/images/blog-empty-state.svg";
 
 export default function BlogDetail() {
   const {isDark} = useContext(StyleContext);
@@ -15,6 +16,11 @@ export default function BlogDetail() {
     return (
       <div className={isDark ? "blog-detail-page dark-mode" : "blog-detail-page"}>
         <div className="blog-detail-shell blog-detail-empty-state">
+          <img
+            src={blogEmptyState}
+            alt="Article not found"
+            className="blog-detail-empty-state-image"
+          />
           <h2>Article not found</h2>
           <p>
             The article you are looking for does not exist or has been moved.
@@ -51,9 +57,13 @@ export default function BlogDetail() {
             <span>{post.readingTime}</span>
           </div>
 
-          {post.coverImage && (
+          {post.coverImage ? (
             <div className="blog-detail-cover">
               <img src={post.coverImage} alt={post.title} />
+            </div>
+          ) : (
+            <div className="blog-detail-cover blog-detail-cover-fallback">
+              <img src={blogEmptyState} alt={post.title} />
             </div>
           )}
 
@@ -95,6 +105,11 @@ export default function BlogDetail() {
                   key={relatedPost.slug}
                   className="blog-detail-related-link"
                 >
+                  {relatedPost.coverImage && (
+                    <div className="blog-detail-related-image">
+                      <img src={relatedPost.coverImage} alt={relatedPost.title} />
+                    </div>
+                  )}
                   <h4 className="blog-detail-related-item-title">
                     {relatedPost.title}
                   </h4>

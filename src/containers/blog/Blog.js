@@ -6,6 +6,7 @@ import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
 import BlogSEO from "../../components/blog/BlogSEO";
 import Button from "../../components/button/Button";
+import blogEmptyState from "../../assets/images/blog-empty-state.svg";
 
 export default function Blog() {
   const {isDark} = useContext(StyleContext);
@@ -30,6 +31,11 @@ export default function Blog() {
 
           {blogPosts.length === 0 ? (
             <div className="blog-empty-state">
+              <img
+                src={blogEmptyState}
+                alt="No articles yet"
+                className="blog-empty-state-image"
+              />
               <p>No articles published yet. Check back soon for new writings.</p>
             </div>
           ) : (
@@ -41,10 +47,17 @@ export default function Blog() {
                   className="blog-grid-link"
                 >
                   <article className={isDark ? "blog-card dark-mode" : "blog-card"}>
-                    {post.coverImage && (
+                    {post.coverImage ? (
                       <div className="blog-card-image">
                         <img
                           src={post.coverImage}
+                          alt={post.title}
+                        />
+                      </div>
+                    ) : (
+                      <div className="blog-card-image blog-card-image-fallback">
+                        <img
+                          src={blogEmptyState}
                           alt={post.title}
                         />
                       </div>
