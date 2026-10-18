@@ -7,14 +7,12 @@ import WorkExperience from "./workExperience/WorkExperience";
 import Projects from "./projects/Projects";
 import StartupProject from "./StartupProjects/StartupProject";
 import Achievement from "./achievement/Achievement";
-import Blogs from "./blogs/Blogs";
 import Footer from "../components/footer/Footer";
-import Talks from "./talks/Talks";
-import Podcast from "./podcast/Podcast";
 import Education from "./education/Education";
 import ScrollToTopButton from "./topbutton/Top";
 import Twitter from "./twitter-embed/twitter";
 import Profile from "./profile/Profile";
+import BlogPreview from "./blog/BlogPreview";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
 import {useContext} from "react";
@@ -53,10 +51,8 @@ const Main = () => {
           <Projects />
           <StartupProject />
           <Achievement />
-          <Blogs />
-          <Talks />
+          <BlogPreview />
           <Twitter />
-          <Podcast />
           <Profile />
           <Footer />
           <ScrollToTopButton />

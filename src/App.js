@@ -3,6 +3,8 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.scss";
 import Main from "./containers/Main";
 import ProjectDetail from "./containers/projectDetail/ProjectDetail";
+import Blog from "./containers/blog/Blog";
+import BlogDetail from "./containers/blog/BlogDetail";
 import {StyleProvider} from "./contexts/StyleContext";
 import {useLocalStorage} from "./hooks/useLocalStorage";
 
@@ -26,6 +28,8 @@ function App() {
       <StyleProvider value={{isDark: isDark, changeTheme: changeTheme}}>
         <div>
           <Routes>
+            <Route path="/blog/:slug" element={<BlogDetail />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/projects/:slug" element={<ProjectDetail />} />
             <Route path="/" element={<Main />} />
           </Routes>
