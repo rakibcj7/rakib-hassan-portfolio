@@ -42,9 +42,9 @@ export default function Greeting() {
                 <Button text="Contact me" href="#contact" />
                 {greeting.resumeLink && (
                   <Button
-                    text="Download my resume"
-                    href={require("./resume.pdf")}
-                    download="Resume.pdf"
+                    text="Download CV"
+                    href="/Rakib-Hassan-Resume.pdf"
+                    download="Rakib-Hassan-Resume.pdf"
                   />
                 )}
               </div>
@@ -55,7 +55,7 @@ export default function Greeting() {
               <DisplayLottie animationData={landingPerson} />
             ) : (
               <img
-                alt="man sitting on table"
+                alt="Man on the office"
                 src={require("../../assets/images/manOnTable.svg")}
               ></img>
             )}

@@ -3,19 +3,31 @@ import "./Project.scss";
 import Button from "../../components/button/Button";
 import {openSource, socialMediaLinks} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
-import Loading from "../../containers/loading/Loading";
+import {getCachedProfile, setCachedProfile} from "../../profileCache";
+
 export default function Projects() {
   const GithubRepoCard = lazy(() =>
     import("../../components/githubRepoCard/GithubRepoCard")
   );
   const FailedLoading = () => null;
-  const renderLoader = () => <Loading />;
   const [repo, setrepo] = useState([]);
   // todo: remove useContex because is not supported
   const {isDark} = useContext(StyleContext);
 
   useEffect(() => {
+    let isMounted = true;
+
     const getRepoData = () => {
+      // Preserve the cached GitHub data across refreshes for 10 minutes so
+      // the Open Source section does not re-fetch on every page load.
+      const cached = getCachedProfile();
+      if (cached && cached.pinnedItems && cached.pinnedItems.edges) {
+        if (isMounted) {
+          setrepoFunction(cached.pinnedItems.edges);
+        }
+        return;
+      }
+
       fetch("/profile.json")
         .then(result => {
           if (result.ok) {
@@ -24,16 +36,27 @@ export default function Projects() {
           throw result;
         })
         .then(response => {
+          if (!isMounted || !response || !response.data || !response.data.user) {
+            return;
+          }
+          setCachedProfile(response.data.user);
           setrepoFunction(response.data.user.pinnedItems.edges);
         })
         .catch(function (error) {
           console.error(
             `${error} (because of this error, nothing is shown in place of Projects section. Also check if Projects section has been configured)`
           );
-          setrepoFunction("Error");
+          if (isMounted) {
+            setrepoFunction("Error");
+          }
         });
     };
+
     getRepoData();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   function setrepoFunction(array) {
@@ -44,7 +67,7 @@ export default function Projects() {
     openSource.display
   ) {
     return (
-      <Suspense fallback={renderLoader()}>
+      <Suspense fallback={null}>
         <div className="main" id="opensource">
           <h1 className="project-title">Open Source Projects</h1>
           <div className="repo-cards-div-main">

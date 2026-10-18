@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="320" viewBox="0 0 400 320">
+  <title>Empty state illustration</title>
+  <rect width="400" height="320" fill="#f5f2f4"/>
+  <rect x="60" y="40" width="280" height="40" rx="8" fill="#6c63ff" opacity="0.85"/>
+  <rect x="60" y="100" width="220" height="24" rx="6" fill="#8c43ce" opacity="0.55"/>
+  <rect x="60" y="136" width="260" height="24" rx="6" fill="#8c43ce" opacity="0.4"/>
+  <rect x="60" y="172" width="180" height="24" rx="6" fill="#8c43ce" opacity="0.3"/>
+  <rect x="60" y="208" width="200" height="24" rx="6" fill="#8c43ce" opacity="0.25"/>
+  <circle cx="320" cy="60" r="14" fill="#6c63ff" opacity="0.5"/>
+  <circle cx="340" cy="80" r="8" fill="#8c43ce" opacity="0.4"/>
+  <path d="M120 250 L160 280 L280 160" stroke="#6c63ff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
