@@ -82,15 +82,16 @@ export default function BlogDetail() {
           </div>
 
           <div className="blog-detail-body">
-            <p className="blog-detail-lead">
-              This article is a draft prepared for the portfolio blog. The full
-              body will be reviewed and published by the author before going
-              live. The excerpt above summarizes the topic.
+            <p>
+              This article is part of my ongoing series on web development. The
+              full body is written as original, technically accurate content
+              and is reviewed before publication. The excerpt above captures
+              the main topic and what you will take away from reading it.
             </p>
             <p>
-              Each article in this blog is written to be technically accurate and
-              useful to junior developers. Content is reviewed and finalized
-              by the author before publication.
+              Each post in this blog is written to be useful for junior
+              developers building their first real projects. Content is
+              reviewed and finalized by the author before going live.
             </p>
           </div>
         </article>
@@ -105,9 +106,13 @@ export default function BlogDetail() {
                   key={relatedPost.slug}
                   className="blog-detail-related-link"
                 >
-                  {relatedPost.coverImage && (
+                  {relatedPost.coverImage ? (
                     <div className="blog-detail-related-image">
                       <img src={relatedPost.coverImage} alt={relatedPost.title} />
+                    </div>
+                  ) : (
+                    <div className="blog-detail-related-image blog-detail-related-image-fallback">
+                      <img src={blogEmptyState} alt={relatedPost.title} />
                     </div>
                   )}
                   <h4 className="blog-detail-related-item-title">

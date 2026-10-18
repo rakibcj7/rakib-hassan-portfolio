@@ -39,6 +39,16 @@ export const blogPosts = [
     readingTime: "12 min read",
     coverImage: require("./assets/images/blog-cover-fullstack.svg"),
     tags: ["Full Stack", "API Design", "Database", "Architecture"]
+  },
+  {
+    slug: "how-to-build-a-portfolio-that-gets-you-noticed",
+    title: "How to Build a Portfolio That Gets You Noticed (Without a Degree or Agency)",
+    excerpt:
+      "A strong portfolio is less about where you studied and more about what you can show. This article covers how to pick real projects, write honest descriptions, and structure your site so recruiters and clients can actually understand what you build.",
+    publishedDate: "2026-10-18",
+    readingTime: "8 min read",
+    coverImage: require("./assets/images/blog-cover-portfolio.svg"),
+    tags: ["Career", "Portfolio", "Personal Growth"]
   }
 ];
 
